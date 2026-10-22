@@ -1,0 +1,19 @@
+{
+  "name": "avari-dev-main",
+  "version": "1.0.0",
+  "description": "OstKost // Fullstack Engineer & Automation Architect — Avari Ecosystem Main Portal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/validate.mjs",
+    "dev": "npx --yes serve -p 3000 ."
+  },
+  "keywords": [
+    "portfolio",
+    "avari",
+    "landing",
+    "ecosystem"
+  ],
+  "author": "Konstantin (OstKost)",
+  "license": "MIT"
+}

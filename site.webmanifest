@@ -1,0 +1,21 @@
+{
+  "name": "OstKost // Fullstack & Automation Architect",
+  "short_name": "Avari",
+  "description": "Портфолио и экосистема сервисов OstKost (avari.dev): Fullstack разработка, агентные AI-воркфлоу, P3.express с MCP, автоматизация n8n и self-hosted инфраструктура.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06080e",
+  "theme_color": "#06080e",
+  "icons": [
+    {
+      "src": "/assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

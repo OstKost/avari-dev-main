@@ -1,0 +1,88 @@
+name: CI / CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: avari-site-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Validate Markup & Assets
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validate site structure and assets
+        run: npm test
+
+      - name: Check shell scripts syntax
+        run: bash -n deploy/*.sh
+
+  deploy:
+    name: Deploy to M0 Cluster Node
+    needs: validate
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy via Restricted SSH
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST || '176.53.174.118' }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER || 'avari-site-deploy' }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          if [[ -z "$DEPLOY_KEY" ]]; then
+            echo "::error::DEPLOY_SSH_KEY secret is not configured in the repository!"
+            exit 1
+          fi
+
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+
+          if [[ -n "$DEPLOY_KNOWN_HOSTS" ]]; then
+            printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+            chmod 600 ~/.ssh/known_hosts
+          else
+            ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          fi
+
+          echo "--> Streaming git archive release to $DEPLOY_USER@$DEPLOY_HOST ($GITHUB_SHA)..."
+          git archive --format=tar.gz HEAD | ssh -i ~/.ssh/deploy_key \
+            -o BatchMode=yes \
+            -o ConnectTimeout=15 \
+            "$DEPLOY_USER@$DEPLOY_HOST" "deploy $GITHUB_SHA"
+
+      - name: Verify Live Production HTTPS
+        run: |
+          echo "--> Verifying https://avari.dev HTTP response..."
+          for i in {1..10}; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://avari.dev/ || true)
+            if [[ "$STATUS" == "200" ]]; then
+              echo "✓ Production endpoint https://avari.dev returned HTTP 200 OK!"
+              exit 0
+            fi
+            echo "  Waiting for endpoint (attempt $i, status: $STATUS)..."
+            sleep 3
+          done
+          echo "::error::Production endpoint verification timed out!"
+          exit 1

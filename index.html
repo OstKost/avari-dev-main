@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OstKost // Fullstack Engineer & Automation Architect — Avari Ecosystem</title>
+    <meta name="description" content="Портфолио и экосистема прикладных сервисов OstKost (avari.dev): Fullstack разработка, агентные AI-воркфлоу, P3.express с MCP, МыслиВслуХ, автоматизация n8n и self-hosted инфраструктура.">
+    <meta name="keywords" content="OstKost, avari.dev, Fullstack Engineer, Automation Architect, AI Agents, Model Context Protocol, MCP, P3.express, n8n, Go Chi, Rust Tauri, React 19, TypeScript, Docker, Self-Hosted">
+    <meta name="author" content="Konstantin (OstKost)">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://avari.dev/">
+
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#06080e">
+    <meta name="msapplication-TileColor" content="#06080e">
+
+    <!-- Favicons & Icons Suite -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph / Facebook / Telegram -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://avari.dev/">
+    <meta property="og:site_name" content="Avari Ecosystem">
+    <meta property="og:title" content="OstKost // Fullstack Engineer & Automation Architect">
+    <meta property="og:description" content="Экосистема прикладных сервисов и инструментов: P3.express с MCP, МыслиВслуХ, Jobs Tracker, AI Assistant, n8n автоматизация и self-hosted стек.">
+    <meta property="og:image" content="https://avari.dev/assets/brand/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="OstKost // Avari Ecosystem Brand Card">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://avari.dev/">
+    <meta name="twitter:title" content="OstKost // Fullstack Engineer & Automation Architect">
+    <meta name="twitter:description" content="Экосистема прикладных сервисов и инструментов: P3.express с MCP, МыслиВслуХ, Jobs Tracker, AI Assistant, n8n автоматизация.">
+    <meta name="twitter:image" content="https://avari.dev/assets/brand/og-image.png">
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://avari.dev/#person",
+          "name": "Konstantin (OstKost)",
+          "alternateName": "OstKost",
+          "jobTitle": "Fullstack Engineer & Automation Architect",
+          "url": "https://avari.dev/",
+          "image": "https://avari.dev/assets/brand/logo.png",
+          "sameAs": [
+            "https://github.com/OstKost",
+            "https://t.me/OstKost",
+            "https://ostkost.ru"
+          ],
+          "knowsAbout": [
+            "Process Automation",
+            "AI Agents & MCP Protocols",
+            "P3.express Methodology",
+            "Go (Chi)",
+            "TypeScript & React 19",
+            "Rust & Tauri v2",
+            "Docker & Linux Noble",
+            "OpenResty & Nginx Lua"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://avari.dev/#website",
+          "url": "https://avari.dev/",
+          "name": "Avari Ecosystem // OstKost",
+          "description": "Портфолио и экосистема прикладных сервисов OstKost",
+          "publisher": { "@id": "https://avari.dev/#person" }
+        },
+        {
+          "@type": "ItemList",
+          "name": "Avari Ecosystem Applications & Projects",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "Avari P3.express",
+                "applicationCategory": "ProjectManagementApplication",
+                "url": "https://p3express.avari.dev",
+                "operatingSystem": "All"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "Avari Jobs",
+                "applicationCategory": "BusinessApplication",
+                "url": "https://jobs.avari.dev",
+                "operatingSystem": "All"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "МыслиВслуХ (quiz.ost.wang)",
+                "applicationCategory": "InteractiveApplication",
+                "url": "https://quiz.ost.wang",
+                "operatingSystem": "All"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "Avari Domains",
+                "applicationCategory": "DeveloperApplication",
+                "url": "https://domains.avari.dev",
+                "operatingSystem": "All"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "Avari Links",
+                "applicationCategory": "UtilitiesApplication",
+                "url": "https://links.avari.dev",
+                "operatingSystem": "All"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "Avari Desktop Assistant",
+                "applicationCategory": "DesktopApplication",
+                "url": "https://github.com/OstKost/avari-assistant",
+                "operatingSystem": "Desktop"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "Avari Dofamine Marketplace",
+                "applicationCategory": "ProductivityApplication",
+                "url": "https://dofamine.avari.dev",
+                "operatingSystem": "All"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "m1nas Core Node",
+                "applicationCategory": "NetworkApplication",
+                "url": "https://m1nas.avari.dev",
+                "operatingSystem": "Linux"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 9,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "n8n Workflow Hub",
+                "applicationCategory": "AutomationApplication",
+                "url": "https://n8n.avari.dev",
+                "operatingSystem": "All"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #06080e;
+            --bg-card: rgba(13, 18, 30, 0.72);
+            --bg-card-hover: rgba(18, 25, 42, 0.9);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(99, 102, 241, 0.45);
+            --primary: #6366f1;
+            --primary-glow: rgba(99, 102, 241, 0.3);
+            --cyan: #06b6d4;
+            --emerald: #10b981;
+            --purple: #a855f7;
+            --amber: #f59e0b;
+            --rose: #f43f5e;
+            --tg: #229ed9;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 0%, rgba(99, 102, 241, 0.16) 0%, transparent 45%),
+                radial-gradient(circle at 85% 15%, rgba(6, 182, 212, 0.14) 0%, transparent 40%),
+                radial-gradient(circle at 50% 60%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 20% 90%, rgba(16, 185, 129, 0.06) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        /* Hero section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0 45px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            text-decoration: none;
+            outline: none;
+        }
+
+        .brand-logo-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px -4px rgba(99, 102, 241, 0.4), 0 0 20px rgba(56, 189, 248, 0.25);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+            display: block;
+        }
+
+        .hero-brand:hover .brand-logo-img {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 14px 40px -4px rgba(99, 102, 241, 0.6), 0 0 30px rgba(56, 189, 248, 0.45);
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.28);
+            border-radius: 9999px;
+            color: var(--emerald);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px -4px rgba(16, 185, 129, 0.2);
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--emerald);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--emerald);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.3); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+
+        h1.name {
+            font-size: clamp(38px, 6vw, 68px);
+            font-weight: 800;
+            letter-spacing: -1.8px;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #ffffff 20%, #e2e8f0 60%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .role-tagline {
+            font-size: clamp(17px, 2.3vw, 21px);
+            color: var(--text-muted);
+            max-width: 820px;
+            margin: 0 auto 30px;
+            font-weight: 500;
+            line-height: 1.65;
+        }
+
+        .role-highlight {
+            color: #f1f5f9;
+            font-weight: 700;
+        }
+
+        /* Metrics / Highlights Strip */
+        .highlights-strip {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin: 0 auto 36px;
+            max-width: 900px;
+        }
+
+        .highlight-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+
+        .highlight-card strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        /* Contacts Bar */
+        .contacts-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+
+        .contact-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 18px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-main);
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            backdrop-filter: blur(12px);
+        }
+
+        .contact-chip:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+
+        .contact-chip.tg:hover {
+            border-color: rgba(34, 158, 217, 0.6);
+            box-shadow: 0 6px 20px -4px rgba(34, 158, 217, 0.35);
+        }
+
+        .contact-chip.mail:hover {
+            border-color: rgba(99, 102, 241, 0.6);
+            box-shadow: 0 6px 20px -4px rgba(99, 102, 241, 0.35);
+        }
+
+        .contact-chip.site:hover {
+            border-color: rgba(6, 182, 212, 0.6);
+            box-shadow: 0 6px 20px -4px rgba(6, 182, 212, 0.35);
+        }
+
+        .contact-chip.gh:hover {
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 6px 20px -4px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Skills Bar */
+        .skills-bar {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 55px;
+        }
+
+        .skill-badge {
+            font-family: var(--font-mono);
+            font-size: 12.5px;
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: #94a3b8;
+            transition: all 0.2s;
+        }
+
+        .skill-badge:hover {
+            color: #e2e8f0;
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        /* Section Headings */
+        .section-header {
+            margin-bottom: 28px;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 23px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-subtitle {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Projects Ecosystem Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 24px;
+            margin-bottom: 55px;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+            backdrop-filter: blur(20px);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--card-accent, var(--primary)), transparent);
+            opacity: 0.6;
+            transition: opacity 0.3s, height 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--border-hover);
+            background: var(--bg-card-hover);
+            box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6), 0 0 24px -6px var(--card-glow, rgba(99, 102, 241, 0.2));
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+            height: 4px;
+        }
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+        }
+
+        .card-tag {
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .card-tag.live {
+            background: rgba(16, 185, 129, 0.12);
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.3);
+            font-weight: 600;
+        }
+
+        .card-tag.repo {
+            background: rgba(168, 85, 247, 0.12);
+            color: #c084fc;
+            border-color: rgba(168, 85, 247, 0.3);
+            font-weight: 600;
+        }
+
+        .card-tag.infra {
+            background: rgba(59, 130, 246, 0.12);
+            color: #60a5fa;
+            border-color: rgba(59, 130, 246, 0.3);
+            font-weight: 600;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-arrow {
+            font-size: 18px;
+            color: var(--text-muted);
+            transition: transform 0.25s ease, color 0.25s ease;
+        }
+
+        .project-card:hover .card-arrow {
+            transform: translate(3px, -3px);
+            color: var(--card-accent, #ffffff);
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* Redesigned Card Meta Block */
+        .card-meta {
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .meta-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            font-family: var(--font-mono);
+            font-size: 12.5px;
+        }
+
+        .meta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            color: #38bdf8;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .meta-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #94a3b8;
+            font-size: 11.5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .meta-badge {
+            font-size: 11px;
+            padding: 1px 7px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #cbd5e1;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .meta-icon {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            opacity: 0.85;
+        }
+
+        .card-stack {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .stack-item {
+            font-size: 11.5px;
+            color: #cbd5e1;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        /* Architecture / Tech Stack Showcase */
+        .tech-overview {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 36px;
+            margin-bottom: 60px;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .tech-item h4 {
+            font-size: 16px;
+            color: #e2e8f0;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tech-item p {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 640px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .highlights-strip {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Interactive Card Screenshot Gallery */
+        .card-gallery {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 18px;
+            background: #090d16;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            user-select: none;
+            touch-action: pan-y;
+        }
+
+        .gallery-slides {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .gallery-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            opacity: 0;
+            transition: opacity 0.22s ease-out, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: scale(1.02);
+            pointer-events: none;
+        }
+
+        .gallery-img.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Hover Navigation Zones (fallback/accessibility) & Indicators */
+        .gallery-indicators {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            gap: 5px;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .gallery-dot {
+            height: 3px;
+            flex: 1;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 2px;
+            transition: background-color 0.2s ease, opacity 0.2s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .gallery-dot.active {
+            background: var(--card-accent, #38bdf8);
+            box-shadow: 0 0 6px var(--card-accent, #38bdf8);
+        }
+
+        .gallery-badge {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-family: var(--font-mono);
+            font-size: 10.5px;
+            color: #e2e8f0;
+            padding: 2px 7px;
+            border-radius: 5px;
+            z-index: 5;
+            pointer-events: none;
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Header -->
+        <header class="hero">
+            <a href="/" class="hero-brand" aria-label="Avari Ecosystem Home">
+                <img src="/assets/brand/logo.svg" alt="Avari Ecosystem Brand Logo" class="brand-logo-img" width="80" height="80">
+            </a>
+            <div class="status-pill">
+                <span class="pulse-dot"></span>
+                <span>Open for Automation & Fullstack Projects</span>
+            </div>
+            <h1 class="name">Konstantin // OstKost</h1>
+            <p class="role-tagline">
+                <span class="role-highlight">Fullstack Engineer & Automation Architect</span>.<br>
+                Проектирую прикладные AI-конвейеры и агентные системы с MCP, разрабатываю высоконагруженные веб-сервисы и выстраиваю надежную self-hosted инфраструктуру.
+            </p>
+
+            <!-- Highlights Strip -->
+            <div class="highlights-strip">
+                <div class="highlight-card">
+                    <span>⚡</span>
+                    <span><strong>9+</strong> Live Сервисов & Нод</span>
+                </div>
+                <div class="highlight-card">
+                    <span>🤖</span>
+                    <span><strong>AI Agents</strong> & MCP Integrations</span>
+                </div>
+                <div class="highlight-card">
+                    <span>🛠️</span>
+                    <span><strong>Go</strong> &bull; <strong>TypeScript</strong> &bull; <strong>Rust</strong></span>
+                </div>
+                <div class="highlight-card">
+                    <span>🔒</span>
+                    <span><strong>100%</strong> Self-Hosted & Secure</span>
+                </div>
+            </div>
+
+            <!-- Quick Contacts -->
+            <div class="contacts-bar">
+                <a href="https://t.me/OstKost" target="_blank" class="contact-chip tg">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#229ed9"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+                    <span>Telegram: <strong>@OstKost</strong></span>
+                </a>
+                <a href="mailto:avari@ostkost.ru" class="contact-chip mail">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span>Email: <strong>avari@ostkost.ru</strong></span>
+                </a>
+                <a href="https://github.com/OstKost" target="_blank" class="contact-chip gh">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub: <strong>OstKost</strong></span>
+                </a>
+                <a href="https://ostkost.ru" target="_blank" class="contact-chip site">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    <span>Сайт: <strong>ostkost.ru</strong></span>
+                </a>
+            </div>
+
+            <div class="skills-bar">
+                <span class="skill-badge">⚙️ Process Automation</span>
+                <span class="skill-badge">🤖 AI Agents & MCP Protocols</span>
+                <span class="skill-badge">📊 P3.express & AI-SDLC</span>
+                <span class="skill-badge">🦀 Rust & Tauri v2</span>
+                <span class="skill-badge">🐹 Go (Chi) & Microservices</span>
+                <span class="skill-badge">🔷 TypeScript / Node.js / React</span>
+                <span class="skill-badge">🚀 OpenResty & Nginx Lua</span>
+                <span class="skill-badge">🐳 Docker & Linux Noble</span>
+                <span class="skill-badge">🔒 WireGuard / AWG VPN</span>
+            </div>
+        </header>
+
+        <!-- Group 1: Ecosystem Applications -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span>🌐 Avari Ecosystem & Applications</span>
+                </h2>
+                <span class="section-subtitle">Live Products & AI Tools</span>
+            </div>
+
+            <div class="projects-grid">
+                <!-- 1. Avari P3.express -->
+                <a href="https://p3express.avari.dev" target="_blank" class="project-card" style="--card-accent: #0ea5e9; --card-glow: rgba(14, 165, 233, 0.3);">
+                    <div class="card-gallery" data-slides="2">
+                        <div class="gallery-slides">
+                            <img class="gallery-img active" src="screenshots/p3express/1.webp" alt="Avari P3.express projects overview" loading="lazy">
+                            <img class="gallery-img" src="screenshots/p3express/2.webp" alt="Avari P3.express tasks view" loading="lazy">
+                        </div>
+                        <div class="gallery-indicators">
+                            <span class="gallery-dot active"></span>
+                            <span class="gallery-dot"></span>
+                        </div>
+                        <span class="gallery-badge">2 screens</span>
+                    </div>
+                    <div class="card-top">
+                        <div class="card-icon">📊</div>
+                        <span class="card-tag live"><span class="pulse-dot"></span>Production Live</span>
+                    </div>
+                    <div class="card-title">
+                        <span>Avari P3.express</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+                    <p class="card-desc">
+                        Управление проектами по методологии P3.express v2 с поддержкой Model Context Protocol (MCP), AI-SDLC сценариями, трекером задач, чеклистами и базой знаний.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-row">
+                            <span class="meta-primary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                                p3express.avari.dev
+                            </span>
+                            <span class="meta-badge">P3.express v2</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-secondary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                OstKost/avari-p3-express
+                            </span>
+                            <span style="color: #34d399; font-size: 11px;">MCP Active</span>
+                        </div>
+                    </div>
+                    <div class="card-stack">
+                        <span class="stack-item">React 18</span>
+                        <span class="stack-item">TypeScript</span>
+                        <span class="stack-item">Go (Chi)</span>
+                        <span class="stack-item">MCP Protocol</span>
+                        <span class="stack-item">AI-SDLC</span>
+                        <span class="stack-item">SQLite WAL</span>
+                    </div>
+                </a>
+
+                <!-- 2. Avari Jobs -->
+                <a href="https://jobs.avari.dev" target="_blank" class="project-card" style="--card-accent: #38bdf8; --card-glow: rgba(56, 189, 248, 0.3);">
+                    <div class="card-gallery" data-slides="5">
+                        <div class="gallery-slides">
+                            <img class="gallery-img active" src="screenshots/jobs/1.webp" alt="Avari Jobs dashboard" loading="lazy">
+                            <img class="gallery-img" src="screenshots/jobs/2.webp" alt="Avari Jobs calendar" loading="lazy">
+                            <img class="gallery-img" src="screenshots/jobs/3.webp" alt="Avari Jobs journal" loading="lazy">
+                            <img class="gallery-img" src="screenshots/jobs/4.webp" alt="Avari Jobs themes" loading="lazy">
+                            <img class="gallery-img" src="screenshots/jobs/5.webp" alt="Avari Jobs mobile" loading="lazy">
+                        </div>
+                        <div class="gallery-indicators">
+                            <span class="gallery-dot active"></span>
+                            <span class="gallery-dot"></span>
+                            <span class="gallery-dot"></span>
+                            <span class="gallery-dot"></span>
+                            <span class="gallery-dot"></span>
+                        </div>
+                        <span class="gallery-badge">5 screens</span>
+                    </div>
+                    <div class="card-top">
+                        <div class="card-icon">💼</div>
+                        <span class="card-tag live"><span class="pulse-dot"></span>Production Live</span>
+                    </div>
+                    <div class="card-title">
+                        <span>Avari Jobs</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+                    <p class="card-desc">
+                        Единое рабочее пространство для отслеживания карьеры: канбан откликов, воронка собеседований, встроенный TUI/CLI, Chrome Extension (MV3) и интеграции.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-row">
+                            <span class="meta-primary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                                jobs.avari.dev
+                            </span>
+                            <span class="meta-badge">Web &bull; Extension</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-secondary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                OstKost/avari-job-applications
+                            </span>
+                            <span style="color: #38bdf8; font-size: 11px;">Go + React 19</span>
+                        </div>
+                    </div>
+                    <div class="card-stack">
+                        <span class="stack-item">React 19</span>
+                        <span class="stack-item">TypeScript</span>
+                        <span class="stack-item">Go (Chi)</span>
+                        <span class="stack-item">Chrome MV3</span>
+                        <span class="stack-item">SQLite WAL</span>
+                        <span class="stack-item">Docker</span>
+                    </div>
+                </a>
+
+                <!-- 3. МыслиВслуХ (quiz.ost.wang) -->
+                <a href="https://quiz.ost.wang" target="_blank" class="project-card" style="--card-accent: #a855f7; --card-glow: rgba(168, 85, 247, 0.35);">
+                    <div class="card-gallery" data-slides="3">
+                        <div class="gallery-slides">
+                            <img class="gallery-img active" src="screenshots/quiz/1.webp" alt="МыслиВслуХ live word cloud view" loading="lazy">
+                            <img class="gallery-img" src="screenshots/quiz/2.webp" alt="МыслиВслуХ join & participant screen" loading="lazy">
+                            <img class="gallery-img" src="screenshots/quiz/3.webp" alt="МыслиВслуХ host control & admin console" loading="lazy">
+                        </div>
+                        <div class="gallery-indicators">
+                            <span class="gallery-dot active"></span>
+                            <span class="gallery-dot"></span>
+                            <span class="gallery-dot"></span>
+                        </div>
+                        <span class="gallery-badge">3 screens</span>
+                    </div>
+                    <div class="card-top">
+                        <div class="card-icon">☁️</div>
+                        <span class="card-tag live"><span class="pulse-dot"></span>Production Live</span>
+                    </div>
+                    <div class="card-title">
+                        <span>МыслиВслуХ (quiz.ost.wang)</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+                    <p class="card-desc">
+                        Живое интерактивное облако ответов на русском языке для встреч, лекций и конференций. Real-time приём ответов с телефонов по QR-коду, физика спиральной Canvas-анимации, модерация и AI-аналитика.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-row">
+                            <span class="meta-primary" style="color: #c084fc;">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                                quiz.ost.wang
+                            </span>
+                            <span class="meta-badge">Interactive Cloud</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-secondary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                OstKost/quiz-word-cloud
+                            </span>
+                            <span style="color: #c084fc; font-size: 11px;">Node 24 + Canvas</span>
+                        </div>
+                    </div>
+                    <div class="card-stack">
+                        <span class="stack-item">Canvas 2D</span>
+                        <span class="stack-item">TypeScript</span>
+                        <span class="stack-item">Node.js 24</span>
+                        <span class="stack-item">SSE Streaming</span>
+                        <span class="stack-item">SQLite WAL</span>
+                        <span class="stack-item">Docker</span>
+                    </div>
+                </a>
+
+                <!-- 4. Avari Domains -->
+                <a href="https://domains.avari.dev" target="_blank" class="project-card" style="--card-accent: #06b6d4; --card-glow: rgba(6, 182, 212, 0.3);">
+                    <div class="card-gallery" data-slides="1">
+                        <div class="gallery-slides">
+                            <img class="gallery-img active" src="screenshots/domains/1.webp" alt="Avari Domains inspector" loading="lazy">
+                        </div>
+                        <div class="gallery-indicators">
+                            <span class="gallery-dot active"></span>
+                        </div>
+                        <span class="gallery-badge">1 screen</span>
+                    </div>
+                    <div class="card-top">
+                        <div class="card-icon">🌐</div>
+                        <span class="card-tag live"><span class="pulse-dot"></span>Production Live</span>
+                    </div>
+                    <div class="card-title">
+                        <span>Avari Domains</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+                    <p class="card-desc">
+                        Комплексная проверка доменов, DNS-записей, MX/SPF/DKIM/DMARC конфигураций, SSL-сертификатов и доступности веб-сервисов в реальном времени.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-row">
+                            <span class="meta-primary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                                domains.avari.dev
+                            </span>
+                            <span class="meta-badge">DNS & WHOIS</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-secondary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                OstKost/avari-domains
+                            </span>
+                            <span style="color: #38bdf8; font-size: 11px;">Go Engine</span>
+                        </div>
+                    </div>
+                    <div class="card-stack">
+                        <span class="stack-item">TypeScript</span>
+                        <span class="stack-item">Go (Chi)</span>
+                        <span class="stack-item">DNS Resolver</span>
+                        <span class="stack-item">SSL Inspector</span>
+                        <span class="stack-item">Tailwind</span>
+                    </div>
+                </a>
+
+                <!-- 5. Avari Links -->
+                <a href="https://links.avari.dev" target="_blank" class="project-card" style="--card-accent: #10b981; --card-glow: rgba(16, 185, 129, 0.3);">
+                    <div class="card-gallery" data-slides="1">
+                        <div class="gallery-slides">
+                            <img class="gallery-img active" src="screenshots/links/1.webp" alt="Avari Links bookmark manager" loading="lazy">
+                        </div>
+                        <div class="gallery-indicators">
+                            <span class="gallery-dot active"></span>
+                        </div>
+                        <span class="gallery-badge">1 screen</span>
+                    </div>
+                    <div class="card-top">
+                        <div class="card-icon">🔗</div>
+                        <span class="card-tag live"><span class="pulse-dot"></span>Production Live</span>
+                    </div>
+                    <div class="card-title">
+                        <span>Avari Links</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+                    <p class="card-desc">
+                        Высокоскоростной Smart URL Shortener & Bookmark Management сервис с подробной аналитикой переходов, тегированием и защищенным роутингом.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-row">
+                            <span class="meta-primary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                                links.avari.dev
+                            </span>
+                            <span class="meta-badge">URL & Bookmarks</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-secondary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                OstKost/avari-links
+                            </span>
+                            <span style="color: #34d399; font-size: 11px;">Next.js Edge</span>
+                        </div>
+                    </div>
+                    <div class="card-stack">
+                        <span class="stack-item">Next.js</span>
+                        <span class="stack-item">TypeScript</span>
+                        <span class="stack-item">Tailwind CSS</span>
+                        <span class="stack-item">Fast Cache</span>
+                        <span class="stack-item">Edge Routing</span>
+                    </div>
+                </a>
+
+                <!-- 6. Avari Desktop Assistant -->
+                <a href="https://github.com/OstKost/avari-assistant" target="_blank" class="project-card" style="--card-accent: #8b5cf6; --card-glow: rgba(139, 92, 246, 0.3);">
+                    <div class="card-gallery" data-slides="4">
+                        <div class="gallery-slides">
+                            <img class="gallery-img active" src="screenshots/assistant/1.webp" alt="Avari Assistant identity" loading="lazy">
+                            <img class="gallery-img" src="screenshots/assistant/2.webp" alt="Avari Assistant motion dynamics" loading="lazy">
+                            <img class="gallery-img" src="screenshots/assistant/3.webp" alt="Avari Assistant transitions" loading="lazy">
+                            <img class="gallery-img" src="screenshots/assistant/4.webp" alt="Avari Assistant states" loading="lazy">
+                        </div>
+                        <div class="gallery-indicators">
+                            <span class="gallery-dot active"></span>
+                            <span class="gallery-dot"></span>
+                            <span class="gallery-dot"></span>
+                            <span class="gallery-dot"></span>
+                        </div>
+                        <span class="gallery-badge">4 screens</span>
+                    </div>
+                    <div class="card-top">
+                        <div class="card-icon">🧝</div>
+                        <span class="card-tag repo">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            GitHub Repository
+                        </span>
+                    </div>
+                    <div class="card-title">
+                        <span>Avari Desktop Assistant</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+                    <p class="card-desc">
+                        Автономный десктопный AI-компаньон нового поколения на базе Tauri v2 (Rust) и React 19: физика спрайтов, трекинг взгляда и мульти-LLM автономность.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-row">
+                            <span class="meta-primary" style="color: #c084fc;">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                github.com/OstKost/avari-assistant
+                            </span>
+                            <span class="meta-badge">Tauri v2</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-secondary">
+                                <span>Desktop AI Companion</span>
+                            </span>
+                            <span style="color: #c084fc; font-size: 11px;">Rust + React 19</span>
+                        </div>
+                    </div>
+                    <div class="card-stack">
+                        <span class="stack-item">Tauri v2</span>
+                        <span class="stack-item">Rust</span>
+                        <span class="stack-item">React 19</span>
+                        <span class="stack-item">TypeScript</span>
+                        <span class="stack-item">Multi-LLM</span>
+                        <span class="stack-item">Agentic Loop</span>
+                    </div>
+                </a>
+
+                <!-- 7. Avari Dofamine Marketplace -->
+                <a href="https://dofamine.avari.dev" target="_blank" class="project-card" style="--card-accent: #ec4899; --card-glow: rgba(236, 72, 153, 0.3);">
+                    <div class="card-gallery" data-slides="5">
+                        <div class="gallery-slides">
+                            <img class="gallery-img active" src="screenshots/dofamine/1.webp" alt="Avari Dofamine catalog" loading="lazy">
+                            <img class="gallery-img" src="screenshots/dofamine/2.webp" alt="Avari Dofamine delivery tracker" loading="lazy">
+                            <img class="gallery-img" src="screenshots/dofamine/3.webp" alt="Avari Dofamine cart" loading="lazy">
+                            <img class="gallery-img" src="screenshots/dofamine/4.webp" alt="Avari Dofamine achievement modal" loading="lazy">
+                            <img class="gallery-img" src="screenshots/dofamine/5.webp" alt="Avari Dofamine user achievements" loading="lazy">
+                        </div>
+                        <div class="gallery-indicators">
+                            <span class="gallery-dot active"></span>
+                            <span class="gallery-dot"></span>
+                            <span class="gallery-dot"></span>
+                            <span class="gallery-dot"></span>
+                            <span class="gallery-dot"></span>
+                        </div>
+                        <span class="gallery-badge">5 screens</span>
+                    </div>
+                    <div class="card-top">
+                        <div class="card-icon">✨</div>
+                        <span class="card-tag live"><span class="pulse-dot"></span>Production Live</span>
+                    </div>
+                    <div class="card-title">
+                        <span>Avari Dofamine Marketplace</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+                    <p class="card-desc">
+                        Платформа управления продуктивностью, фокус-сессиями и привычками с микросервисной архитектурой и маркетплейсом поведенческих шаблонов.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-row">
+                            <span class="meta-primary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                                dofamine.avari.dev
+                            </span>
+                            <span class="meta-badge">Marketplace</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-secondary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                OstKost/avari-dofamine
+                            </span>
+                            <span style="color: #ec4899; font-size: 11px;">Microservices</span>
+                        </div>
+                    </div>
+                    <div class="card-stack">
+                        <span class="stack-item">Go (Chi)</span>
+                        <span class="stack-item">PostgreSQL</span>
+                        <span class="stack-item">Redis</span>
+                        <span class="stack-item">Kafka</span>
+                        <span class="stack-item">State Engines</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Group 2: Core Infrastructure & Automation -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span>⚡ Core Infrastructure & Automation</span>
+                </h2>
+                <span class="section-subtitle">Gateway & Orchestration Engine</span>
+            </div>
+
+            <div class="projects-grid">
+                <!-- 8. m1nas Core Node -->
+                <a href="https://m1nas.avari.dev" target="_blank" class="project-card" style="--card-accent: #3b82f6; --card-glow: rgba(59, 130, 246, 0.3);">
+                    <div class="card-gallery" data-slides="2">
+                        <div class="gallery-slides">
+                            <img class="gallery-img active" src="screenshots/m1nas/1.webp" alt="m1nas Core Node OpenResty Gateway" loading="lazy">
+                            <img class="gallery-img" src="screenshots/m1nas/2.webp" alt="m1nas Zero-Trust & SSL Ingress" loading="lazy">
+                        </div>
+                        <div class="gallery-indicators">
+                            <span class="gallery-dot active"></span>
+                            <span class="gallery-dot"></span>
+                        </div>
+                        <span class="gallery-badge">2 screens</span>
+                    </div>
+                    <div class="card-top">
+                        <div class="card-icon">⚡</div>
+                        <span class="card-tag infra"><span class="pulse-dot"></span>Core Gateway</span>
+                    </div>
+                    <div class="card-title">
+                        <span>m1nas Core Node</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+                    <p class="card-desc">
+                        Центральный узел кластера: OpenResty Manager Edge, Docker Swarm/Compose orchestration, автоматический ACME SSL менеджер и reverse-proxy балансировка.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-row">
+                            <span class="meta-primary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                                m1nas.avari.dev
+                            </span>
+                            <span class="meta-badge">Edge Gateway</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-secondary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                                Host: 176.53.174.118
+                            </span>
+                            <span style="color: #60a5fa; font-size: 11px;">OpenResty Edge</span>
+                        </div>
+                    </div>
+                    <div class="card-stack">
+                        <span class="stack-item">OpenResty</span>
+                        <span class="stack-item">Linux Noble</span>
+                        <span class="stack-item">HTTP/2 TLS</span>
+                        <span class="stack-item">Lua JIT</span>
+                        <span class="stack-item">Docker Cluster</span>
+                    </div>
+                </a>
+
+                <!-- 9. n8n Automation -->
+                <a href="https://n8n.avari.dev" target="_blank" class="project-card" style="--card-accent: #ff6d5a; --card-glow: rgba(255, 109, 90, 0.3);">
+                    <div class="card-gallery" data-slides="2">
+                        <div class="gallery-slides">
+                            <img class="gallery-img active" src="screenshots/n8n/1.webp" alt="n8n Workflow Hub pipelines" loading="lazy">
+                            <img class="gallery-img" src="screenshots/n8n/2.webp" alt="n8n AI Agents & Triggers" loading="lazy">
+                        </div>
+                        <div class="gallery-indicators">
+                            <span class="gallery-dot active"></span>
+                            <span class="gallery-dot"></span>
+                        </div>
+                        <span class="gallery-badge">2 screens</span>
+                    </div>
+                    <div class="card-top">
+                        <div class="card-icon">⚙️</div>
+                        <span class="card-tag live"><span class="pulse-dot"></span>Production Live</span>
+                    </div>
+                    <div class="card-title">
+                        <span>n8n Workflow Hub</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+                    <p class="card-desc">
+                        Оркестратор сквозных интеграций, агентных AI-воркфлоу, вебхук-пайплайнов и очередей автоматизации между внешними API, Telegram и LLM.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-row">
+                            <span class="meta-primary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                                n8n.avari.dev
+                            </span>
+                            <span class="meta-badge">Automation Engine</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-secondary">
+                                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                Active Workflow Service
+                            </span>
+                            <span style="color: #ff6d5a; font-size: 11px;">Agentic Bus</span>
+                        </div>
+                    </div>
+                    <div class="card-stack">
+                        <span class="stack-item">n8n</span>
+                        <span class="stack-item">Node.js</span>
+                        <span class="stack-item">AI Agents</span>
+                        <span class="stack-item">Webhooks</span>
+                        <span class="stack-item">LLM Orchestration</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Engineering Principles -->
+        <section class="tech-overview">
+            <div class="section-header" style="border: none; padding: 0; margin-bottom: 20px;">
+                <h3 style="font-size: 20px; font-weight: 700;">🛠️ Архитектурные принципы & Стек</h3>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4>⚙️ Автоматизация & Процессы</h4>
+                    <p>Построение сквозных сценариев в n8n, оркестрация очередей, интеграция API и исключение рутинных операций в компаниях.</p>
+                </div>
+                <div class="tech-item">
+                    <h4>🤖 AI-First & MCP Интеграции</h4>
+                    <p>Глубокая интеграция LLM через протокол Model Context Protocol (MCP), агентные циклы, структурированный контекст и автономные ассистенты.</p>
+                </div>
+                <div class="tech-item">
+                    <h4>🧩 Прикладная разработка</h4>
+                    <p>Создание чистых и поддерживаемых веб-сервисов на TypeScript, React/Next.js, Go (Chi) и Rust (Tauri) с упором на надежность и UX.</p>
+                </div>
+                <div class="tech-item">
+                    <h4>🛡️ Security & Self-Hosting</h4>
+                    <p>Контейнеризация в Docker, шифрование трафика (TLS 1.3/HTTP2), защищенные VPN-туннели (WireGuard/AWG) и независимость от PaaS.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-left">
+                <div><strong>Konstantin (OstKost)</strong> &bull; &copy; 2026 avari.dev ecosystem</div>
+                <div style="font-size: 13px;">TG: <a href="https://t.me/OstKost" target="_blank" style="color: #38bdf8; text-decoration: none;">@OstKost</a> &bull; Email: <a href="mailto:avari@ostkost.ru" style="color: #818cf8; text-decoration: none;">avari@ostkost.ru</a></div>
+            </div>
+            <div class="footer-links">
+                <a href="https://ostkost.ru" target="_blank" style="color: #06b6d4; font-weight: 600;">ostkost.ru</a>
+                <a href="https://github.com/OstKost" target="_blank">GitHub</a>
+                <a href="https://t.me/OstKost" target="_blank">Telegram</a>
+                <a href="https://quiz.ost.wang" target="_blank">МыслиВслуХ</a>
+                <a href="https://p3express.avari.dev" target="_blank">P3.express</a>
+                <a href="https://domains.avari.dev" target="_blank">Avari Domains</a>
+                <a href="https://n8n.avari.dev" target="_blank">n8n Automation</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Interactive Screenshot Hover Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleries = document.querySelectorAll('.card-gallery');
+
+            galleries.forEach(gallery => {
+                const totalSlides = parseInt(gallery.getAttribute('data-slides'), 10) || 1;
+                const images = gallery.querySelectorAll('.gallery-img');
+                const dots = gallery.querySelectorAll('.gallery-dot');
+
+                if (totalSlides <= 1) return;
+
+                let ticking = false;
+
+                function updateSlide(index) {
+                    if (index < 0) index = 0;
+                    if (index >= totalSlides) index = totalSlides - 1;
+
+                    images.forEach((img, i) => {
+                        img.classList.toggle('active', i === index);
+                    });
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('active', i === index);
+                    });
+                }
+
+                gallery.addEventListener('pointermove', (e) => {
+                    const rect = gallery.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const width = rect.width;
+                    if (width <= 0) return;
+
+                    const ratio = Math.max(0, Math.min(0.999, x / width));
+                    const targetIndex = Math.floor(ratio * totalSlides);
+
+                    if (!ticking) {
+                        window.requestAnimationFrame(() => {
+                            updateSlide(targetIndex);
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
+
+                gallery.addEventListener('pointerleave', () => {
+                    updateSlide(0);
+                });
+
+                // Also cycle on click / tap for touch devices
+                gallery.addEventListener('click', (e) => {
+                    // if touch/click, advance slide
+                    if (window.matchMedia('(hover: none)').matches) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        let curIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+                        const nextIndex = (curIndex + 1) % totalSlides;
+                        updateSlide(nextIndex);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

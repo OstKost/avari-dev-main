@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+    <defs>
+        <!-- Background Gradient -->
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0b0f19" />
+            <stop offset="100%" stop-color="#05070c" />
+        </linearGradient>
+
+        <!-- Main Star Gradient -->
+        <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#6366f1" />
+            <stop offset="100%" stop-color="#a855f7" />
+        </linearGradient>
+
+        <!-- Core Core Gradient -->
+        <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" />
+            <stop offset="60%" stop-color="#a5f3fc" />
+            <stop offset="100%" stop-color="#818cf8" />
+        </linearGradient>
+
+        <!-- Subtle Glow Filter -->
+        <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="16" result="blur1" />
+            <feGaussianBlur stdDeviation="32" result="blur2" />
+            <feMerge>
+                <feMergeNode in="blur2" />
+                <feMergeNode in="blur1" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Outer Rounded Container -->
+    <rect width="512" height="512" rx="112" fill="url(#bgGrad)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="4" />
+
+    <!-- Ambient Glow behind star -->
+    <circle cx="256" cy="256" r="140" fill="#6366f1" opacity="0.18" filter="blur(40px)" />
+    <circle cx="256" cy="256" r="80" fill="#38bdf8" opacity="0.22" filter="blur(25px)" />
+
+    <!-- Group for Centered Star Icon -->
+    <g transform="translate(256, 256)" filter="url(#neonGlow)">
+        <!-- Outer Diamond Flares -->
+        <path d="M 0,-190 Q 0,-45 -45,0 Q 0,45 0,190 Q 0,45 45,0 Q 0,-45 0,-190 Z" fill="url(#starGrad)" />
+        <path d="M -190,0 Q -45,0 0,-45 Q 45,0 190,0 Q 45,0 0,45 Q -45,0 -190,0 Z" fill="url(#starGrad)" opacity="0.95" />
+
+        <!-- 45-degree secondary subtle rays -->
+        <path d="M -65,-65 Q -15,-15 0,-20 Q 15,-15 65,-65 Q 15,-15 20,0 Q 15,15 65,65 Q 15,15 0,20 Q -15,15 -65,65 Q -15,15 -20,0 Q -15,-15 -65,-65 Z" fill="#38bdf8" opacity="0.65" />
+
+        <!-- Central Sparkle Diamond -->
+        <polygon points="0,-85 24,-24 85,0 24,24 0,85 -24,24 -85,0 -24,-24" fill="url(#coreGrad)" />
+
+        <!-- Core Pure Light Dot -->
+        <circle cx="0" cy="0" r="16" fill="#ffffff" />
+    </g>
+</svg>
